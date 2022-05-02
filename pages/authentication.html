@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>authentication</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <section class="login-dark">
+        <form method="post">
+
+            <div id="google_translate_element"></div>
+            <h2 class="visually-hidden">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="mb-3" id="submit">
+                <button class="btn btn-primary d-block w-100" type="button">Log In</button>
+            </div>
+            <a class="forgot" href="./request-password">Forgot your email or password?</a>
+            <a class="forgot" href="./suscribe">Create account</a>
+        </form>
+    </section>
+
+
+    <!-- Modals -->
+    <div class="modal" tabindex="-1" id="authenticationErrorAlert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Incorrect username or password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#authenticationErrorAlert').hide();"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Please try again or reset your password.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="assets/jquery/jquery.js"></script>
+    <script src="assets/md5/md5.js"></script>
+    <script src="assets/utils/authentication.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+   </script>
+</body>
+
+</html>

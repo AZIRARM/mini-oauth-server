@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Suscribe</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <section class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post">
+
+                <div id="google_translate_element"></div>
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="mb-3"><input class="form-control" type="text" name="firstname" placeholder="First name"></div>
+                <div class="mb-3"><input class="form-control" type="text" name="lastname" placeholder="Last name"></div>
+                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="mb-3"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)"></div>
+                <div class="mb-3">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="checkAcceptation" id="checkAcceptationId">I agree to the license terms.</label></div>
+                </div>
+                <div class="mb-3" id="submit"><button class="btn btn-dark d-block w-100" type="button">Sign Up</button></div>
+                <a class="already" href="./">You already have an account? Login here.</a>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Modals -->
+    <div class="modal" tabindex="-1" id="licenseAlert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">License</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#licenseAlert').hide();"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You need to accept terms of license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="passwordAlert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Password verification error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#passwordAlert').hide();"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Password verification error.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="emailAlert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Email format error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#emailAlert').hide();"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Email format is wrong.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="passwordFormatAlert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Password format error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#passwordFormatAlert').hide();"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The password must have at least 6 characters, at most 16 characters. It must contain at least one number and one special character.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="assets/jquery/jquery.js"></script>
+    <script type="text/javascript" src="assets/md5/md5.js"></script>
+    <script type="text/javascript" src="assets/utils/suscribe.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+
+   </script>
+</body>
+
+</html>

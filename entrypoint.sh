@@ -6,7 +6,7 @@ MINI_CLOUD_CONFIG=http://192.168.0.104:11111/secrets
 ENV=dev
 API_GATEWAY_SECRET=Zmr03yATFimLW2xw7D3Vz4GfGDfYC1pB
 
-URL=${MINI_CLOUD_CONFIG}/${ENV}"/authentication-service/?option=properties"
+URL=${MINI_CLOUD_CONFIG}/${ENV}"/mini-oauth-server/?option=properties"
 echo "Url of cloud config : ${URL}"
 
 echo "Retreive secrets from cloud config"
@@ -16,5 +16,5 @@ curl -X POST  ${URL} \
   --header "Content-Type: application/json" \
   --header "api-key: "${API_GATEWAY_SECRET}>/app/.env
 
-echo "[server-startup] Starting node application : authentication service"
+echo "[server-startup] Starting node application : mini-oauth-server"
 exec node /app/server.js

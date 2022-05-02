@@ -2,10 +2,6 @@
 
 echo "Start entrypoint"
 
-MINI_CLOUD_CONFIG=http://192.168.0.104:11111/secrets
-ENV=dev
-API_GATEWAY_SECRET=Zmr03yATFimLW2xw7D3Vz4GfGDfYC1pB
-
 URL=${MINI_CLOUD_CONFIG}/${ENV}"/mini-oauth-server/?option=properties"
 echo "Url of cloud config : ${URL}"
 
